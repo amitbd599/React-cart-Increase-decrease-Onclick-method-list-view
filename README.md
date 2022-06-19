@@ -1,10 +1,6 @@
-# Getting Started with Create React App
+# H2 React-cart-Increase-decrease-Onclick-method-list-view (Underline)
 
-# H1 React-cart-Increase-decrease-Onclick-method-list-view (Underline)
-
-###Heading 3 link [Heading link](https://zingy-blini-2f5c1c.netlify.app "Heading link")
-
-###Images
+### [Demo](https://zingy-blini-2f5c1c.netlify.app "Heading link")
 
 ![](https://i.ibb.co/6HTQFyq/image.png)
 
@@ -61,14 +57,12 @@ const App: React.FC = () => {
 };
 
 export default App;
-
+```
 
 ####Project setup
 
 `$ npm install`
 
-
 ####Compiles and hot-reloads for development
 
 `$ npm start`
-```
