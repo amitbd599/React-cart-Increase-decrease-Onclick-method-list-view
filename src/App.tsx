@@ -1,16 +1,13 @@
 import React, { useState } from "react";
 import "./App.css";
-import { FiMinus } from "react-icons/fi";
-import { FiPlus } from "react-icons/fi";
-import { GrClose } from "react-icons/gr";
 
 const UpdateData = ({ value }: any) => {
   const [hold, setHold] = useState(0);
 
-  const hendelIncrease = () => {
+  const handelIncrease = () => {
     setHold(hold + 1);
   };
-  const hendelDecrease = () => {
+  const handelDecrease = () => {
     if (hold > 0) {
       setHold(hold - 1);
     }
@@ -19,11 +16,11 @@ const UpdateData = ({ value }: any) => {
   return (
     <div className="UpdateData">
       <span className="item">{value.title} </span>
-      <button className="item" onClick={hendelDecrease}>
+      <button className="item" onClick={handelDecrease}>
         -
       </button>
       <span className="item">{hold}</span>
-      <button className="item" onClick={hendelIncrease}>
+      <button className="item" onClick={handelIncrease}>
         +
       </button>
     </div>

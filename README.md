@@ -1,46 +1,74 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# H1 React-cart-Increase-decrease-Onclick-method-list-view (Underline)
 
-## Available Scripts
+###Heading 3 link [Heading link](https://zingy-blini-2f5c1c.netlify.app "Heading link")
 
-In the project directory, you can run:
+###Images
 
-### `npm start`
+![](https://i.ibb.co/6HTQFyq/image.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+####Javascript
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```javascript
+import React, { useState } from "react";
+import "./App.css";
 
-### `npm test`
+const UpdateData = ({ value }: any) => {
+  const [hold, setHold] = useState(0);
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  const handelIncrease = () => {
+    setHold(hold + 1);
+  };
+  const handelDecrease = () => {
+    if (hold > 0) {
+      setHold(hold - 1);
+    }
+  };
 
-### `npm run build`
+  return (
+    <div className="UpdateData">
+      <span className="item">{value.title} </span>
+      <button className="item" onClick={handelDecrease}>
+        -
+      </button>
+      <span className="item">{hold}</span>
+      <button className="item" onClick={handelIncrease}>
+        +
+      </button>
+    </div>
+  );
+};
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+const productData = [
+  { id: 1, title: "Product One", price: 50 },
+  { id: 2, title: "Product Two", price: 150 },
+];
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+const App: React.FC = () => {
+  return (
+    <div className="App">
+      <div className="main">
+        <h2>React Increase Decrease value List View</h2>
+        <div>
+          {productData.map((value) => {
+            return <UpdateData value={value} />;
+          })}
+        </div>
+      </div>
+    </div>
+  );
+};
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+export default App;
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+####Project setup
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+`$ npm install`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+####Compiles and hot-reloads for development
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+`$ npm start`
+```
