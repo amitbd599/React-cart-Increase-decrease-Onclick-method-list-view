@@ -1,4 +1,4 @@
-# H3 React-cart-Increase-decrease-Onclick-method-list-view using TypeScript
+### React-cart-Increase-decrease-Onclick-method-list-view using TypeScript
 
 ### [Demo](https://zingy-blini-2f5c1c.netlify.app "Heading link")
 
